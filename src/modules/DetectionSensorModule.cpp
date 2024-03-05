@@ -18,11 +18,11 @@ int32_t DetectionSensorModule::runOnce()
     */
     // moduleConfig.detection_sensor.enabled = true;
     // moduleConfig.detection_sensor.monitor_pin = 10; // WisBlock PIR IO6
-    // moduleConfig.detection_sensor.monitor_pin = 21; // WisBlock RAK12013 Radar IO6
+    moduleConfig.detection_sensor.monitor_pin = 21; // This is the port for SOS button
     // moduleConfig.detection_sensor.minimum_broadcast_secs = 30;
     // moduleConfig.detection_sensor.state_broadcast_secs = 120;
     // moduleConfig.detection_sensor.detection_triggered_high = true;
-    // strcpy(moduleConfig.detection_sensor.name, "Motion");
+    strcpy(moduleConfig.detection_sensor.name, "SOS");
 
     if (moduleConfig.detection_sensor.enabled == false)
         return disable();
